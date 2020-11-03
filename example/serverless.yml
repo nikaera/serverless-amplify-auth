@@ -1,0 +1,51 @@
+service:
+  name: serverless-amplify-auth
+  publish: false
+
+custom:
+  # serverless-amplify-auth's sample params
+  amplify-auth:
+    appId: XXXXXXXXXXXXX # <string (required): Amplify's Application ID>
+    envName: ${opt:stage, self:provider.stage, 'dev'} # <string (required): Amplify's environment name>
+    # profile: default # <string (optional): Specify an AWS Profile that can handle Amplify and IAM>
+    # isClearPolicy: false # <boolean (optional): Delete all policies existing in the Role before updating the Policy>
+    unauthRole: # <Policy (optional): Write a policy for the unauthRole created by Amplify auth>
+      - PolicyName: "Unauth"
+        PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Action:
+                - appsync:GraphQL
+              Resource:
+                - arn:aws:appsync:#{AWS::Region}:#{AWS::AccountId}:apis/${self:custom.appSyncApiId}/types/Mutation/fields/createComment
+                - arn:aws:appsync:#{AWS::Region}:#{AWS::AccountId}:apis/${self:custom.appSyncApiId}/types/Query/fields/listComments
+                - arn:aws:appsync:#{AWS::Region}:#{AWS::AccountId}:apis/${self:custom.appSyncApiId}/types/Subscription/fields/onCreateComment
+    authRole: # <Policy (optional): Write a policy for the authRole created by Amplify auth>
+      - PolicyName: "Auth"
+        PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Action:
+                - appsync:GraphQL
+              Resource:
+                - arn:aws:appsync:#{AWS::Region}:#{AWS::AccountId}:apis/${self:custom.appSyncApiId}/types/Mutation/*
+                - arn:aws:appsync:#{AWS::Region}:#{AWS::AccountId}:apis/${self:custom.appSyncApiId}/types/Query/*
+                - arn:aws:appsync:#{AWS::Region}:#{AWS::AccountId}:apis/${self:custom.appSyncApiId}/types/Subscription/*
+
+  appSyncApiId: XXXXXXXXXXXXX
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-northeast-1
+
+plugins:
+  localPath: '../../'
+  modules:
+    - serverless-amplify-auth
+
+functions:
+  hello:
+    handler: handler.hello
