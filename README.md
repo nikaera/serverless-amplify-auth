@@ -80,6 +80,7 @@ Update the `authRole` and `unauthRole` policy of Amplify specified by `custom.am
 ## 📝 Notes
 
 - When you use `custom.amplify-auth.profile`, you must set `AWS_SDK_LOAD_CONFIG=1` as an environment variable. (ex. `env AWS_SDK_LOAD_CONFIG=1 serverless package`)
+  - If `custom.amplify-auth.profile` is set without `AWS_SDK_LOAD_CONFIG=1` as an environment variable, the error `ConfigError: Missing region in config` occurs.
   - [Loading Credentials in Node.js using a Configured Credential Process](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/loading-node-credentials-configured-credential-process.html)
 
 ## 🎁 Contributing
