@@ -12,13 +12,13 @@ Update Policy for Amplify's Auth Role and Unauth Role in the Serverless Framewor
 Install the plugin via Yarn (recommended)
 
 ```bash
-yarn add nikaera/serverless-amplify-auth#main
+yarn add serverless-amplify-auth
 ```
 
 or via NPM
 
 ```bash
-npm install nikaera/serverless-amplify-auth#main
+npm install serverless-amplify-auth
 ```
 
 ## 🛠️ Configuring the plugin
