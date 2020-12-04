@@ -21,6 +21,24 @@ or via NPM
 npm install serverless-amplify-auth
 ```
 
+You must also add the `amplify:GetBackendEnvironment` permission to the IAM Role.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        //...
+        {
+            "Effect": "Allow",
+            "Action": [
+                "amplify:GetBackendEnvironment"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 ## 🛠️ Configuring the plugin
 
 Add `serverless-amplify-auth` to the plugins section of `serverless.yml`
