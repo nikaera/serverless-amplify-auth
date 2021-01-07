@@ -67,8 +67,8 @@ export default class Plugin {
       })}`,
     )
 
+    process.env.AWS_SDK_LOAD_CONFIG = 'true'
     if (this.variables.profile) {
-      process.env.AWS_SDK_LOAD_CONFIG = 'true'
       const credentials = new SharedIniFileCredentials({
         profile: this.variables.profile,
       })
