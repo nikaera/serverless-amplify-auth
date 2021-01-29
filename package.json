@@ -7,16 +7,16 @@
     "lib"
   ],
   "dependencies": {
-    "@aws-amplify/auth": "^3.4.10",
-    "amazon-cognito-identity-js": "^4.5.5",
-    "aws-sdk": "^2.784.0",
+    "@aws-amplify/auth": "^3.4.18",
+    "amazon-cognito-identity-js": "^4.5.8",
+    "aws-sdk": "^2.834.0",
     "axios": ">=0.21.1"
   },
   "devDependencies": {
-    "@types/node": "^14.14.6",
-    "@types/serverless": "^1.78.7",
-    "eslint": "^7.12.1",
-    "husky": "^4.3.0",
+    "@types/node": "^14.14.22",
+    "@types/serverless": "^1.78.20",
+    "eslint": "^7.18.0",
+    "husky": "^4.3.8",
     "lint-staged": "^10.5.1",
     "prettier": "^2.1.2",
     "tslint": "^6.1.3",
