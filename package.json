@@ -1,6 +1,6 @@
 {
   "name": "serverless-amplify-auth",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Configuring Policy for Amplify's Auth Role and Unauth Role in the Serverless Framework",
   "main": "lib/index.js",
   "files": [
