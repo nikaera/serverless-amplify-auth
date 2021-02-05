@@ -27,7 +27,6 @@ You must also add the `amplify:GetBackendEnvironment` permission to the IAM Role
 {
     "Version": "2012-10-17",
     "Statement": [
-        //...
         {
             "Effect": "Allow",
             "Action": [
