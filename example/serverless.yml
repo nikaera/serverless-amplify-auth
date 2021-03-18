@@ -1,6 +1,5 @@
-service:
-  name: serverless-amplify-auth
-  publish: false
+service: serverless-amplify-auth
+configValidationMode: warn
 
 custom:
   # serverless-amplify-auth's sample params
@@ -40,6 +39,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: ap-northeast-1
+  lambdaHashingVersion: 20201221
 
 plugins:
   localPath: '../../'
