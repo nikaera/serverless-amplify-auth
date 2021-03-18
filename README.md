@@ -12,13 +12,13 @@ Update Policy for Amplify's Auth Role and Unauth Role in the Serverless Framewor
 Install the plugin via Yarn (recommended)
 
 ```bash
-yarn add serverless-amplify-auth
+yarn add --dev serverless-amplify-auth
 ```
 
 or via NPM
 
 ```bash
-npm install serverless-amplify-auth
+npm i -D serverless-amplify-auth
 ```
 
 You must also add the `amplify:GetBackendEnvironment` permission to the IAM Role.
