@@ -16,7 +16,7 @@
     "@types/node": "^15.12.2",
     "@types/serverless": "^1.78.20",
     "eslint": "^7.18.0",
-    "husky": "^6.0.0",
+    "husky": "^8.0.2",
     "lint-staged": "^11.0.0",
     "prettier": "^2.1.2",
     "tslint": "^6.1.3",
