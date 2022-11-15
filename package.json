@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@types/node": "^15.12.2",
-    "@types/serverless": "^1.78.20",
+    "@types/serverless": "^3.12.9",
     "eslint": "^7.18.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
