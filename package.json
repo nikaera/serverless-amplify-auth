@@ -7,7 +7,7 @@
     "lib"
   ],
   "dependencies": {
-    "@aws-amplify/auth": "^4.0.2",
+    "@aws-amplify/auth": "^5.0.4",
     "amazon-cognito-identity-js": "^5.0.3",
     "aws-sdk": "^2.834.0",
     "axios": ">=0.21.1"
