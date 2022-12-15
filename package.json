@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@aws-amplify/auth": "^4.0.2",
-    "amazon-cognito-identity-js": "^5.0.3",
+    "amazon-cognito-identity-js": "^6.1.0",
     "aws-sdk": "^2.834.0",
     "axios": ">=0.21.1"
   },
